@@ -1,0 +1,33 @@
+{
+  "name": "hidrauboa-site",
+  "version": "1.0.0",
+  "description": "Landing page institucional para a Hidrauboa - Mangueiras Hidráulicas e Conexões (Boa Esperança - MG)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanLuceat/hidrauboa-site.git"
+  },
+  "keywords": [
+    "landing-page",
+    "frontend",
+    "typescript",
+    "tailwindcss",
+    "vite",
+    "hidraulica",
+    "boa-esperanca"
+  ],
+  "author": "Nathan Rodrigues Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

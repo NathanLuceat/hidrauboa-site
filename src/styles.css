@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Agronomic & Hydraulic Machinery Palette */
+  --color-agro-bg: #0f1411;
+  --color-agro-surface: #151d18;
+  --color-agro-card: #1c2620;
+  --color-agro-card-hover: #222f28;
+
+  --color-agro-border: #28382f;
+  --color-agro-border-light: #384d41;
+
+  --color-agro-green: #23683f;
+  --color-agro-green-dark: #17462a;
+  --color-agro-green-light: #3da869;
+
+  --color-agro-gold: #d99a22;
+  --color-agro-gold-hover: #c48717;
+  --color-agro-gold-light: #f3b942;
+  --color-agro-gold-muted: #5c4314;
+
+  --color-agro-cream: #ece7df;
+  --color-agro-sand: #c7bea9;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* Subtle Agronomic Technical Grid & Field Pattern */
+.bg-field-pattern {
+  background-color: #0f1411;
+  background-image:
+    linear-gradient(to right, rgba(40, 56, 47, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(40, 56, 47, 0.35) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Utilitarian Agricultural Panel */
+.panel-agro {
+  background-color: #161d19;
+  border: 1px solid #28382f;
+}
+
+.panel-agro-card {
+  background-color: #1a231e;
+  border: 1px solid #2a3b31;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.panel-agro-card:hover {
+  border-color: #d99a22;
+  background-color: #202b25;
+}
+
+/* Technical Stamp & Ruler borders */
+.border-agro-dashed {
+  border-style: dashed;
+  border-color: #384d41;
+}
+
+/* Utilitarian Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1411;
+}
+::-webkit-scrollbar-thumb {
+  background: #28382f;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3da869;
+}

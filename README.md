@@ -113,12 +113,211 @@ npm run preview
 
 ## 🌐 Hospedagem / Deploy
 
-Por ser uma aplicação puramente estática, a pasta `dist/` pode ser hospedada gratuitamente em qualquer plataforma moderna de hospedagem com deploy contínuo via GitHub:
+O site já está no ar em:
+
+**[https://hidrauboa.nlux.workers.dev](https://hidrauboa.nlux.workers.dev)**
+
+Hospedagem atual: **Cloudflare Workers**. A pasta `dist/` também pode ser publicada em outras plataformas:
 
 - **Vercel**: Importe o repositório; o framework preset `Vite` será detectado automaticamente.
 - **Netlify**: Build command `npm run build`, Publish directory `dist`.
 - **GitHub Pages**: Configurado via GitHub Actions para publicação do diretório `dist/`.
 - **Hospedagem Tradicional / cPanel / VPS**: Faça upload do conteúdo da pasta `dist/` para a pasta raiz web (`public_html` ou `/var/www/html`).
+
+---
+
+## 📄 HTML atual da página inicial (`index.html`)
+
+Ponto de entrada do site no ar. Contém metadados de SEO, verificação do Google Search Console, Open Graph, geo tags e Schema.org JSON-LD. O conteúdo visual da landing page é injetado em `#app` por `src/main.ts`.
+
+```html
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="0y2UYrYmsJrG_cvDht6JFzfnVOG2nQ0ID_xqnc29tC8" />
+
+    <!-- Primary Meta Tags -->
+    <title>Hidrauboa | Mangueiras Hidráulicas, Conexões e Prensagem em Boa Esperança - MG</title>
+    <meta name="title" content="Hidrauboa | Mangueiras Hidráulicas, Conexões e Prensagem em Boa Esperança - MG" />
+    <meta name="description" content="Hidrauboa em Boa Esperança - MG: Especialista em mangueiras hidráulicas de alta e super pressão, conexões, terminais, adaptadores, engates rápidos, pistões e prensagem imediata na hora para linhas agrícola, rodoviária e industrial. Atendimento direto via WhatsApp." />
+    <meta name="keywords" content="hidrauboa, hidrauboa boa esperança, hidrauboa mg, mangueiras hidraulicas hidrauboa, prensagem de mangueiras boa esperança, conexoes hidraulicas boa esperanca, terminais hidraulicos, engates rapidos hidraulica, hidraulica boa esperança mg, mangueiras alta pressao minas gerais, almir hidrauboa, joao pedro hidrauboa, oficina hidraulica boa esperanca" />
+    <meta name="author" content="Hidrauboa" />
+    <meta name="publisher" content="Hidrauboa" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://hidrauboa.com.br/" />
+    <meta name="theme-color" content="#151d18" />
+
+    <!-- Geo Tags (Local SEO para Boa Esperança - MG) -->
+    <meta name="geo.region" content="BR-MG" />
+    <meta name="geo.placename" content="Boa Esperança" />
+    <meta name="geo.position" content="-21.090406;-45.580272" />
+    <meta name="ICBM" content="-21.090406, -45.580272" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hidrauboa.com.br/" />
+    <meta property="og:site_name" content="Hidrauboa" />
+    <meta property="og:title" content="Hidrauboa | Mangueiras Hidráulicas, Conexões e Prensagem na Hora" />
+    <meta property="og:description" content="Loja especializada em mangueiras hidráulicas de alta pressão, terminais e conexões para tratores, caminhões e máquinas agrícolas em Boa Esperança - MG." />
+    <meta property="og:image" content="https://hidrauboa.com.br/img/produtos-lista.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://hidrauboa.com.br/" />
+    <meta name="twitter:title" content="Hidrauboa | Mangueiras Hidráulicas e Conexões em Boa Esperança - MG" />
+    <meta name="twitter:description" content="Prensagem imediata, estoque completo de mangueiras de alta pressão, conexões e engates rápidos para o agronegócio e linha pesada." />
+    <meta name="twitter:image" content="https://hidrauboa.com.br/img/produtos-lista.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/img/logo-reimaginada.png" />
+    <link rel="apple-touch-icon" href="/img/logo-reimaginada.png" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD Structured Data for Google Ranking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "Store", "AutoRepair"],
+          "@id": "https://hidrauboa.com.br/#business",
+          "name": "Hidrauboa",
+          "legalName": "Hidrauboa Mangueiras Hidráulicas e Conexões",
+          "alternateName": ["Hidrau Boa", "Hidrauboa Boa Esperança", "Hidrauboa Mangueiras", "Hidrauboa MG"],
+          "url": "https://hidrauboa.com.br/",
+          "logo": "https://hidrauboa.com.br/img/logo-reimaginada.png",
+          "image": [
+            "https://hidrauboa.com.br/img/logo-reimaginada.png",
+            "https://hidrauboa.com.br/img/produtos-lista.png",
+            "https://hidrauboa.com.br/img/exemplos-produtos.png",
+            "https://hidrauboa.com.br/img/marca-explicacao.png"
+          ],
+          "description": "Empresa especializada em mangueiras hidráulicas de alta e super pressão, conexões, terminais, adaptadores, engates rápidos, comandos, pistões e prensagem na hora para linhas agrícola, industrial e transporte em Boa Esperança - MG.",
+          "telephone": "+5535988442004",
+          "priceRange": "$$",
+          "currenciesAccepted": "BRL",
+          "paymentAccepted": "Cash, Credit Card, Debit Card, Pix, Boleto",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Boa Esperança",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -21.090406,
+            "longitude": -45.580272
+          },
+          "hasMap": "https://maps.app.goo.gl/TYkL2svWdjg9xiSUA",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday"],
+              "opens": "07:30",
+              "closes": "12:00"
+            }
+          ],
+          "areaServed": [
+            "Boa Esperança",
+            "Três Pontas",
+            "Campo Belo",
+            "Santana da Vargem",
+            "Coqueiral",
+            "Ilicínea",
+            "Guapé",
+            "Sul de Minas"
+          ],
+          "knowsAbout": [
+            "Mangueiras Hidráulicas de Alta Pressão",
+            "Prensagem de Mangueiras na Hora",
+            "Terminais DKO, JIC, BSP, NPT e Flanges",
+            "Engates Rápidos Hidráulicos",
+            "Linhas de Retorno para Tratores",
+            "Cilindros e Pistões Hidráulicos",
+            "Vedações e Molas Plásticas Espirais"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+55-35-98844-2004",
+              "contactType": "sales",
+              "contactOption": "WhatsApp",
+              "areaServed": "BR",
+              "availableLanguage": "Portuguese"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+55-35-99957-8758",
+              "contactType": "customer service",
+              "contactOption": "WhatsApp",
+              "areaServed": "BR",
+              "availableLanguage": "Portuguese"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hidrauboa.com.br/#website",
+          "url": "https://hidrauboa.com.br/",
+          "name": "Hidrauboa",
+          "alternateName": ["Hidrauboa", "Hidrau Boa", "Hidrauboa Mangueiras"],
+          "description": "Site institucional e catálogo da Hidrauboa em Boa Esperança - MG"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hidrauboa.com.br/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Onde encontrar a Hidrauboa para prensagem de mangueiras hidráulicas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Hidrauboa está localizada em Boa Esperança - MG, com balcão de atendimento e oficina especializada em corte, montagem e prensagem na hora de mangueiras hidráulicas de alta pressão."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais produtos e serviços a Hidrauboa oferece?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Hidrauboa oferece mangueiras hidráulicas de 1 a 4 tramas de aço (normas SAE), terminais DKO, JIC, BSP, NPT, flanges, engates rápidos, linhas de retorno para tratores agrícolas, pistões, comandos e prensagem imediata."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como solicitar um orçamento na Hidrauboa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você pode solicitar um orçamento diretamente pelo WhatsApp com Almir no número (35) 98844-2004 ou com João Pedro no (35) 99957-8758."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#0f1411] text-[#ece7df] font-sans antialiased selection:bg-[#d99a22] selection:text-[#0f1411] overflow-x-hidden">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+```
 
 ---
 

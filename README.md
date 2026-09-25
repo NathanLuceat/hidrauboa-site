@@ -128,6 +128,12 @@ Desenvolvido por **Nathan Rodrigues Oliveira**.
 
 ---
 
-## 📄 Licença
+## 📄 Licença e Solicitações de Uso
 
-Este projeto está sob a licença [ISC](LICENSE).
+Este projeto é protegido sob termos de **Todos os Direitos Reservados (All Rights Reserved)**. É proibida a reprodução, cópia, alteração ou distribuição total ou parcial do código, design e ativos visuais sem autorização prévia por escrito.
+
+Para dúvidas, solicitações de licenciamento ou autorização de uso, consulte o arquivo [`LICENSE`](LICENSE) ou entre em contato com:
+
+- **Responsável Comercial:** Almir (Hidrauboa — Vendas & Orçamentos)
+- **WhatsApp / Telefone:** [(35) 98844-2004](https://wa.me/5535988442004?text=Ol%C3%A1%20Almir,%20gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20o%20software/site%20da%20Hidrauboa.)
+- **Localização:** Boa Esperança - MG

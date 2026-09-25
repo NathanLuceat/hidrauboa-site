@@ -22,7 +22,7 @@
     "boa-esperanca"
   ],
   "author": "Nathan Rodrigues Oliveira",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.2",

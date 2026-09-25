@@ -1,0 +1,6 @@
+# robots.txt for Hidrauboa
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hidrauboa.com.br/sitemap.xml

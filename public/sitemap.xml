@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hidrauboa.com.br/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hidrauboa.com.br/img/logo-reimaginada.png</image:loc>
+      <image:title>Logotipo Hidrauboa - Mangueiras Hidráulicas e Conexões</image:title>
+      <image:caption>Hidrauboa em Boa Esperança - MG</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hidrauboa.com.br/img/produtos-lista.png</image:loc>
+      <image:title>Catálogo de Produtos Hidrauboa</image:title>
+      <image:caption>Catálogo técnico de mangueiras, terminais e conexões Hidrauboa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hidrauboa.com.br/img/exemplos-produtos.png</image:loc>
+      <image:title>Mangueiras Montadas e Conexões Hidrauboa</image:title>
+      <image:caption>Exemplos de produtos e prensagem na Hidrauboa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hidrauboa.com.br/img/marca-explicacao.png</image:loc>
+      <image:title>Identidade e Conceito Hidrauboa</image:title>
+      <image:caption>Marca Hidrauboa - Força, Campo e Tecnologia Hidráulica</image:caption>
+    </image:image>
+  </url>
+</urlset>

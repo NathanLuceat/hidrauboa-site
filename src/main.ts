@@ -13,6 +13,7 @@ const ic = {
   arrow: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>`,
   check: `<svg class="w-3.5 h-3.5 text-[#3da869]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`,
   zoom: `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>`,
+  chevronDown: `<svg class="w-4 h-4 text-[#d99a22] transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>`,
 };
 
 /* ─── Contact Data ─── */
@@ -104,6 +105,29 @@ const catalog: CatalogItem[] = [
   },
 ];
 
+const FAQS = [
+  {
+    q: 'Onde fica a oficina da Hidrauboa em Boa Esperança – MG?',
+    a: 'Estamos localizados em Boa Esperança - MG com balcão de atendimento e oficina especializada pronta para corte, prensagem e montagem imediata de mangueiras para linha pesada e agrícola.',
+  },
+  {
+    q: 'Quais tipos de mangueiras e terminais hidráulicos vocês têm a pronta entrega?',
+    a: 'Trabalhamos com estoque completo de mangueiras de 1 a 4 tramas de aço (normas SAE 100R1, 100R2, 100R12, 100R13), terminais DKO, JIC, BSP, NPT, flanges SAE código 61/62, adaptadores métricos e engates rápidos para tratores e implementos.',
+  },
+  {
+    q: 'A prensagem é feita na hora no balcão?',
+    a: 'Sim! Nosso maquinário de prensagem hidráulica calibrada permite cortar, cravar e testar mangueiras na hora, reduzindo ao máximo o tempo de parada da sua máquina, trator ou caminhão.',
+  },
+  {
+    q: 'Vocês atendem produtores rurais e empresas de outras cidades da região?',
+    a: 'Com certeza. Atendemos diariamente clientes, produtores rurais, oficinas e frotas de Boa Esperança, Três Pontas, Campo Belo, Santana da Vargem, Coqueiral, Ilicínea, Guapé e todo o Sul de Minas.',
+  },
+  {
+    q: 'Como posso solicitar uma cotação rápida pelo WhatsApp?',
+    a: 'Basta enviar uma foto da mangueira rompida ou do terminal com as medidas para o Almir no (35) 98844-2004 ou para o João Pedro no (35) 99957-8758. Respondemos imediatamente com disponibilidade de estoque e valor.',
+  },
+];
+
 /* ─── Helpers ─── */
 function waBtn(contact: typeof WA.almir, label: string, variant: 'primary' | 'flat' = 'primary') {
   const base = variant === 'primary'
@@ -148,6 +172,7 @@ app.innerHTML = `
       <a href="#produtos" class="hover:text-[#ece7df] transition-colors">Produtos</a>
       <a href="#servicos" class="hover:text-[#ece7df] transition-colors">Serviços</a>
       <a href="#contato" class="hover:text-[#ece7df] transition-colors">Contato</a>
+      <a href="#faq" class="hover:text-[#ece7df] transition-colors">Dúvidas</a>
       <a href="#localizacao" class="hover:text-[#ece7df] transition-colors">Localização</a>
     </nav>
 
@@ -168,6 +193,7 @@ app.innerHTML = `
     <a href="#produtos" class="mob-link block py-2.5 text-sm font-semibold text-[#c7bea9] hover:text-[#ece7df] border-b border-[#28382f]/60">Produtos</a>
     <a href="#servicos" class="mob-link block py-2.5 text-sm font-semibold text-[#c7bea9] hover:text-[#ece7df] border-b border-[#28382f]/60">Serviços</a>
     <a href="#contato" class="mob-link block py-2.5 text-sm font-semibold text-[#c7bea9] hover:text-[#ece7df] border-b border-[#28382f]/60">Contato</a>
+    <a href="#faq" class="mob-link block py-2.5 text-sm font-semibold text-[#c7bea9] hover:text-[#ece7df] border-b border-[#28382f]/60">Dúvidas</a>
     <a href="#localizacao" class="mob-link block py-2.5 text-sm font-semibold text-[#c7bea9] hover:text-[#ece7df] border-b border-[#28382f]/60">Localização</a>
     <div class="pt-3 flex flex-col gap-2">
       ${waBtn(WA.almir, 'Falar com Almir')}
@@ -189,12 +215,11 @@ app.innerHTML = `
         </div>
 
         <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-[#ece7df] leading-[1.15] tracking-tight">
-          Mangueiras hidráulicas e conexões de alta pressão
+          <span class="text-[#d99a22]">Hidrauboa</span> — Mangueiras hidráulicas, conexões e prensagem na hora
         </h1>
 
         <p class="text-sm sm:text-base text-[#c7bea9] leading-relaxed">
-          Estoque completo para tratores, caminhões, colheitadeiras e máquinas pesadas.
-          Corte, montagem e crimpagem sob medida no balcão — sua operação não fica parada.
+          Referência em <strong>Boa Esperança – MG</strong> e região. Estoque completo de mangueiras de alta pressão, terminais, flanges e engates rápidos para tratores, máquinas agrícolas e linha pesada.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 pt-2">
@@ -579,6 +604,40 @@ app.innerHTML = `
   </div>
 </section>
 
+<!-- ═══ faq ═══ -->
+<section id="faq" class="py-16 lg:py-24 bg-[#0f1411] border-t border-[#28382f]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+    <div class="max-w-xl space-y-3 mb-10">
+      <div class="flex items-center gap-3 text-xs font-bold text-[#c7bea9] uppercase tracking-wider">
+        <span class="w-8 h-px bg-[#3da869]"></span>
+        Dúvidas Frequentes
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#ece7df] tracking-tight">
+        Perguntas sobre mangueiras, conexões e prensagem
+      </h2>
+      <p class="text-sm text-[#c7bea9]">
+        Respostas diretas sobre o atendimento e oficina especializada da Hidrauboa em Boa Esperança – MG.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      ${FAQS.map(item => `
+        <details class="group panel-agro border border-[#28382f] open:border-[#d99a22] transition-colors">
+          <summary class="flex items-center justify-between p-5 cursor-pointer list-none select-none text-[#ece7df] font-bold text-sm sm:text-base group-hover:text-[#d99a22] transition-colors">
+            <span>${item.q}</span>
+            <span class="ml-4 shrink-0">${ic.chevronDown}</span>
+          </summary>
+          <div class="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#c7bea9] leading-relaxed border-t border-[#28382f]/60 mt-1">
+            ${item.a}
+          </div>
+        </details>
+      `).join('')}
+    </div>
+
+  </div>
+</section>
+
 <!-- ═══ location ═══ -->
 <section id="localizacao" class="py-16 lg:py-24 bg-[#151d18] border-t border-[#28382f]">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -696,6 +755,7 @@ app.innerHTML = `
         <a href="#produtos" class="block hover:text-[#ece7df] transition-colors py-0.5">Produtos</a>
         <a href="#servicos" class="block hover:text-[#ece7df] transition-colors py-0.5">Serviços</a>
         <a href="#contato" class="block hover:text-[#ece7df] transition-colors py-0.5">Contato</a>
+        <a href="#faq" class="block hover:text-[#ece7df] transition-colors py-0.5">Dúvidas (FAQ)</a>
         <a href="#localizacao" class="block hover:text-[#ece7df] transition-colors py-0.5">Localização</a>
       </div>
 
